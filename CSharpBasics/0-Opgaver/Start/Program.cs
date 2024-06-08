@@ -1,4 +1,6 @@
-﻿namespace Start
+﻿using System.Security.Cryptography;
+
+namespace Start
 {
     internal class Program
     {
@@ -35,11 +37,16 @@
 
             Console.WriteLine("2. Lav et program som skriver et tilfældigt tal ud i konsollen");
 
+            Random random = new Random();
+            int tilfældigtTal = random.Next();
+
+            Console.WriteLine(tilfældigtTal);
+
             Console.WriteLine("3. Skriv en variable ind i en streng ved brug af $-tegnet");
 
             string input = "Indsæt mig i en anden streng";
 
-            Console.WriteLine("Indsæt input herefter: ");
+            Console.WriteLine($"Indsæt input herefter: {input} ");
         }
 
 
@@ -48,13 +55,38 @@
             header("Conditionals - If / Else statements");
 
             Console.WriteLine("1. I skal skrive et stykke kode som fortæller om et tal (int) er lige eller ulige");
-
+            Random random = new Random();
+            int num = random.Next(0, 100);
+            Console.WriteLine(num);
+            if (num % 2 == 0)
+            {
+                Console.WriteLine("Tallet er lige");
+            }
+            else {
+                Console.WriteLine("Tallet er ulige");
+            }
             Console.WriteLine("2. 1. I skal skrive et stykke kode som fortæller om 5 går op i det tal som i vælger (int). \n Hvis den går op i det skal i skrive: 5 går op i (det tal i har valgt)");
-
+            Random random1 = new Random();
+            int num1 = random.Next(0, 100);
+            Console.WriteLine(num1);
+            if (num1 % 5 == 0)
+            {
+                Console.WriteLine("Tallet går op i fem");
+            }
+            else
+            {
+                Console.WriteLine("Tallet går ikke op i 5");
+            }
             Console.WriteLine("3. Lav opgave 2 igen, men i stedet for selv at vælge et tal skal i lave sådan at den selv vælger et tal mellem 0 og 100.");
 
             Console.WriteLine("4. Lav et program som fortæller jer hvilke af de her 3 tal der er størst.\r\n a = 25; b = 33; c = 12;");
+            int a = 25;
+            int b = 33;
+            int c = 12;
 
+           int maxfirst = Math.Max(a, b);
+            int maxsecond = Math.Max(c, maxfirst); 
+            Console.WriteLine(maxsecond);
             Console.WriteLine("5. Lav et program der fortæller hvor varmt det er ud fra en temperatur. Kategorierne er som følger:\r\n- Hvis det er 0° eller under, skal der skrives: Det er frostvejr\r\n- Hvis det er mellem 1° og 10°, skal der skrives: Det er meget koldt\r\n- Hvis det er mellem 11° og 20°, skal der skrives: Det er koldt\r\n- Hvis det er mellem 21° og 30°, skal der skrives: Det er normalt vejr\r\n- Hvis det er mellem 31° og 40°, skal der skrives: Det er varmt\r\n- Hvis det er 41° eller over, skal der skrives: Det er meget varmt");
 
             Console.WriteLine("6. Lav et program som omformer tal til ugedage ved brug af Conditionals, som eksempel nedenunder:\r\n    \r\n    Den 1. dag i ugen er mandag\r\n    \r\n    Den 2. dag i ugen er tirsdag \r\n    \r\n    Den 4. dag i ugen er Torsdag osv.");
