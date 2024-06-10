@@ -1,4 +1,5 @@
-﻿using System.Security.Cryptography;
+﻿using System.ComponentModel.Design;
+using System.Security.Cryptography;
 
 namespace Start
 {
@@ -89,7 +90,38 @@ namespace Start
             Console.WriteLine(maxsecond);
             Console.WriteLine("5. Lav et program der fortæller hvor varmt det er ud fra en temperatur. Kategorierne er som følger:\r\n- Hvis det er 0° eller under, skal der skrives: Det er frostvejr\r\n- Hvis det er mellem 1° og 10°, skal der skrives: Det er meget koldt\r\n- Hvis det er mellem 11° og 20°, skal der skrives: Det er koldt\r\n- Hvis det er mellem 21° og 30°, skal der skrives: Det er normalt vejr\r\n- Hvis det er mellem 31° og 40°, skal der skrives: Det er varmt\r\n- Hvis det er 41° eller over, skal der skrives: Det er meget varmt");
 
-            Console.WriteLine("6. Lav et program som omformer tal til ugedage ved brug af Conditionals, som eksempel nedenunder:\r\n    \r\n    Den 1. dag i ugen er mandag\r\n    \r\n    Den 2. dag i ugen er tirsdag \r\n    \r\n    Den 4. dag i ugen er Torsdag osv.");
+            Random random2 = new Random();
+            int temp = random.Next(0,50);
+            Console.WriteLine(temp);
+            if (temp <= 0)
+            {
+                Console.WriteLine("Det er frost vejr");
+            }
+            else if (temp >= 1 && temp <=10 )
+            {
+                Console.WriteLine("Det er meget koldt");
+            }
+            else if (temp >= 11 && temp <= 20) {
+                
+            
+                 Console.WriteLine("Det er koldt");
+            }
+                
+            else if (temp >= 21 && temp <= 30)
+            {
+                Console.WriteLine("Det er normalt vejr");
+            }
+            else if (temp >= 31 && temp <= 40)
+            {
+                Console.WriteLine("Det er varmt");
+            }
+            else if (temp >= 41)
+            {
+                Console.WriteLine("Det er meget varmt");
+            }
+
+
+                Console.WriteLine("6. Lav et program som omformer tal til ugedage ved brug af Conditionals, som eksempel nedenunder:\r\n    \r\n    Den 1. dag i ugen er mandag\r\n    \r\n    Den 2. dag i ugen er tirsdag \r\n    \r\n    Den 4. dag i ugen er Torsdag osv.");
 
         }
         static void Arrays()
@@ -100,13 +132,17 @@ namespace Start
 
             List<string> byer1 = new List<string> { "Randers", "Viborg", "Aarhus", "København" };
 
+            Console.WriteLine(byer1[1]);
+
             Console.WriteLine("2. Tilføj “Skive” til denne array");
 
             List<string> byer2 = new List<string> { "Randers", "Viborg", "Aarhus", "København" };
+            byer2.Add("Skive");
 
             Console.WriteLine("3. Erstat den værdi, uden at ændre direkte i listen, som ikke passer ind, så listen stemmer");
 
             List<int> talrække1 = new List<int> { 0, 1, 0, 3, 4, 5, 6 };
+            talrække1[2] = 2;
 
             Console.WriteLine("4. Skriv, i konsollen, den største værdi fra følgende liste. Selvfølgelig ikke manuelt");
 
