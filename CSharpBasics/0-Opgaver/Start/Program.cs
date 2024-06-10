@@ -122,7 +122,36 @@ namespace Start
 
 
                 Console.WriteLine("6. Lav et program som omformer tal til ugedage ved brug af Conditionals, som eksempel nedenunder:\r\n    \r\n    Den 1. dag i ugen er mandag\r\n    \r\n    Den 2. dag i ugen er tirsdag \r\n    \r\n    Den 4. dag i ugen er Torsdag osv.");
-
+            int dag = random.Next(1, 7);
+            Console.WriteLine(dag);
+            if (dag == 1)
+            {
+                Console.WriteLine("Den 1. dag i ugen er mandag");
+            }
+            else if (dag == 2)
+            {
+                Console.WriteLine("Den 2. dag i ugen er tirsdag");
+            }
+            else if (dag == 3)
+            {
+                Console.WriteLine("Den 3. dag i ugen er onsdag");
+            }
+            else if (dag == 4)
+            {
+                Console.WriteLine("Den 4. dag i ugen er torsdag");
+            }
+            else if (dag == 5)
+            {
+                Console.WriteLine("Den 5. dag i ugen er fredag");
+            }
+            else if (dag == 6)
+            {
+                Console.WriteLine("Den 6. dag i ugen er lørdag");
+            }
+            else if (dag == 7)
+            {
+                Console.WriteLine("Den 7. dag i ugen er søndag");
+            }
         }
         static void Arrays()
         {
@@ -138,6 +167,7 @@ namespace Start
 
             List<string> byer2 = new List<string> { "Randers", "Viborg", "Aarhus", "København" };
             byer2.Add("Skive");
+            Console.WriteLine(byer2[4]);
 
             Console.WriteLine("3. Erstat den værdi, uden at ændre direkte i listen, som ikke passer ind, så listen stemmer");
 
